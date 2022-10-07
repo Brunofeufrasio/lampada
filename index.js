@@ -1,26 +1,31 @@
-const on = document.getElementById ('on')
-const off = document.getElementById ('off')
-const lamp = document.getElementById ('lamp')
 
+function on () {
+    document.getElementById("lamp").src="imagen/ligada.jpg";
+    
 
-function lampOn () {
-    lamp.src = 'imagen/ligada.jpg';
 }
 
-function lampOff () {
+function off () {
+    document.getElementById("lamp").src="imagen/desligada.jpg";
 
-    lamp.src = 'imagen/desligada.jpg';
 }
+/*function quebra () {
+    document.getElementById("lamp").src="imagen/quebrada.jpg";
+   
 
-/*function lampQuebra () {
-
-    lamp.src = 'imagen/quebrada.jpg';
 }
 */
 
-on.addEventListener('click', lampOn);
-off.addEventListener('click', lampOff);
+function pisca () {
+    var intervalo = 0;
+    var contador = 0;
+    while(contador < 30) {
+        intervalo += 200;
+        setTimeout("document.getElementById('lamp').src='imagen/ligada.jpg';",intervalo);
 
-lamp.addEventListener('dblclick', lampOn,)
-lamp.addEventListener('click', lampOff,)
+        intervalo += 200;
+        setTimeout("document.getElementById('lamp').src='imagen/desligada.jpg';",intervalo);
+        contador++;
+    }
+}
 

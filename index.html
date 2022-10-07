@@ -9,15 +9,17 @@
 </head>
 <body>
     <header>
-        <h1>LAMPADA</h1>
+        <h1>LÂMPADA</h1>
         <main>
             <div>
                 <img src="imagen/desligada.jpg" alt="" id="lamp">
             </div>
-            <div>
-                <button id="on">Ligar</button>
-                <button id="off">Desligar</button>
-            </div>
+            <form>
+                <input type="button"  value="Ligar" onclick="on()" >
+                <input type="button"  value="Desligar" onclick="off()" >
+                <input type="button"  value="Piscar" onclick="pisca()" >
+               <!-- <input type="button"  value="Quebrar" onclick="quebra()" > -->
+            </form>
         </main>
     </header>
     
